@@ -1,0 +1,13 @@
+name: shelf_throttle_example
+description: An example usage of the shelf_throttle package.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.3.0
+
+dependencies:
+  http: ^1.2.1
+  shelf: ^1.4.1
+  shelf_throttle:
+    path: ../
