@@ -1,7 +1,7 @@
 name: shelf_throttle
 description: A Shelf middleware that applies throttling to incoming requests.
-version: 0.5.0
-publish_to: none
+version: 0.5.1
+homepage: https://github.com/tomwyr/shelf-throttle
 
 environment:
   sdk: ^3.3.0

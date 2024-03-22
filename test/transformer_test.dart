@@ -15,7 +15,10 @@ void main() {
       subscription?.cancel();
     });
 
-    StreamController<int> listen(Duration minTime, void Function(int value) onData) {
+    StreamController<int> listen(
+      Duration minTime,
+      void Function(int value) onData,
+    ) {
       final controller = StreamController<int>();
       subscription = controller.stream.throttle(minTime).listen(onData);
       return controller;

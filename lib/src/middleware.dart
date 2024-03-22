@@ -21,7 +21,8 @@ Middleware throttle(Duration window) {
 
   return (innerHandler) {
     return (request) async {
-      final resumeEvent = stream.firstWhere((resumedRequest) => resumedRequest == request);
+      final resumeEvent =
+          stream.firstWhere((resumedRequest) => resumedRequest == request);
       controller.add(request);
       await resumeEvent;
       return innerHandler(request);

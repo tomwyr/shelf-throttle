@@ -1,5 +1,7 @@
 # Shelf Throttle
 
+[![pub package](https://img.shields.io/pub/v/shelf_throttle.svg)](https://pub.dev/packages/shelf_throttle)
+
 A [Shelf](https://github.com/dart-lang/shelf/tree/master) middleware that applies global throttling to all incoming requests with a given time window.
 
 ```Dart
@@ -15,4 +17,30 @@ get('$baseUrl/hello');
 await Future.delayed(Duration(seconds: 3));
 // Handled after another 2 seconds.
 get('$baseUrl/world');
+```
+
+## Installation
+
+Add package dependency to your `pubspec.yaml` file:
+```
+dependencies:
+  shelf_throttle: ^0.5.0
+```
+
+Get the package:
+```
+dart pub get
+```
+
+Alternatively, use Dart CLI to add and get the package:
+```
+dart pub add shelf_throttle
+```
+
+Use it in your pipeline:
+```
+import 'package:shelf_throttle/shelf_throttle.dart';
+
+const window = Duration(seconds: 5);
+Pipeline().addMiddleware(throttle(window)).addHandler(handleRequest);
 ```
