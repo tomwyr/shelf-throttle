@@ -38,7 +38,7 @@ dart pub add shelf_throttle
 ```
 
 Use it in your pipeline:
-```
+```Dart
 import 'package:shelf_throttle/shelf_throttle.dart';
 
 const window = Duration(seconds: 5);
